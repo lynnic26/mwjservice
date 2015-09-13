@@ -1,0 +1,164 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  color: #5a5a5a;
+  font-family: 'Microsoft Yahei'
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+
+  /*position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;*/
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+
+/*.navbar .container {
+  width: auto;
+}*/
+ .navbar{
+  margin-bottom: 0;
+  background-color: #fff;
+  height: 80px;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar .navbar-brand img{
+  height: 60px;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.navbar .nav{
+  height: 75px;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.nav>li>a{
+  line-height: 75px;
+  font-size: 18px;
+  color: #777;
+  padding:0 29px;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar-nav li.active,
+.navbar-nav li:hover{
+  background-color: #eee;
+  border-bottom: 6px solid #e83c16;
+}
+.nav>li.active>a{
+  color: #000;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 350px;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 350px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 350px;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Introduction
+------------------------- */
+.introduction{
+  background: url(img/bg_index.jpg);
+  height: 200px;
+  background-size: cover;
+  background-position: left bottom;
+}
+/* footer
+------------------------- */
+.footer{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.footer ul{
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+.footer ul>li{
+  float: left;
+  padding-right: 40px;
+}
+.footer ul>li>a{
+  color: #777;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+ 
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
