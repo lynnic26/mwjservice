@@ -1,3 +1,4 @@
+@import "mixin";
 $themeColor:#e93d15;
 .navbar.navbar-shrink {
 	background-color: #fff;
@@ -57,6 +58,25 @@ $themeColor:#e93d15;
 		height: 200px;
 	}
 }
+.first-cap {
+	left: 50px;
+	top:100px;
+	text-shadow:2px 2px 2px $themeColor; 
+}
+.second-cap {
+	right: -200px;
+	top:120px;
+
+	text-shadow:2px 2px 2px $themeColor; 
+}
+.marketing{
+	border-bottom: 1px dotted #777;
+	.btn-default{
+		background-color: $themeColor;
+		border-color: $themeColor;
+		color:#fff;
+	}
+}
 .page-container{
 	padding: 0;
 	width: 980px;
@@ -100,7 +120,97 @@ $themeColor:#e93d15;
 	}
 }
 
+.cleaning{
+	padding:0 60px 60px 80px;
+	text-align: center;
+	border-bottom: 1px dotted #000;
+	.cleaning-cap{
+		margin: 60px auto;
+	}
+}
 
+.service-list {
+
+    .row{
+ 		margin-left: -4px;
+ 		margin-right: -4px;
+ 	}
+	.col-sm-5{
+		width: 40%;
+	}
+	.col-sm-7{
+		width: 60%;
+	}
+	figure{
+		position: relative;
+		height: 210px;
+		background-color: #eee;
+		overflow: hidden;
+		margin:4px 0;
+		background-color: #0d61fb;
+		figcaption{
+			position: absolute;
+			bottom:20px;
+			left: 20px;
+			z-index: 1025;
+
+			font-size:20px;
+			font-weight: 600;
+			color: darken(#fff,0%);
+
+		}
+		img{
+			@include opacity(0.8);
+
+			// opacity: 0.8;
+			@include transition(transform 0.35s);
+		}
+		&:hover img{
+			@include translate(-50px,0px);
+			@include opacity(1.0);
+			// transform :translateX(-50px);
+			// transition : transform 0.35s;
+		}
+	}
+	figure.first-pic{
+		height: 428px;
+	}
+}
+.service-list [class*=col-] {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.washing{
+	height: 600px;
+	background-image: url(../img/carservice.jpg);
+	background-color: $themeColor;
+	background-attachment: fixed;
+	text-align: center;
+	margin:0 auto;
+    
+    h1{
+    	margin-top: 40px;
+    	margin-bottom: 40px;
+    }
+	color:#fff;
+	.washing-title{
+		color:#fff;
+		font-weight: 600;
+		text-shadow:2px 2px 2px #000;
+	}
+	ul{
+		display: inline-block;
+		list-style: none;
+		li{
+			float:left;
+			padding-right: 10px;
+			padding-left: 10px;
+			padding-top:10px;
+			background: rgba(233,61,21,0.6);
+		}
+	}
+}
 /*----------contact.html-----*/
 .container.contact{
     .contact-form{
